@@ -1,0 +1,20 @@
+// Variables
+
+const navLinks = document.querySelector('.nav-links');
+const hamMenu = document.querySelector('.hamburger-menu');
+const hamMenuIcon = document.querySelector('.hamburger-menu i');
+
+hamMenu.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+
+  // hamburger menu icon toggle
+  if (hamMenuIcon.classList.contains('fa-bars')) {
+    hamMenuIcon.classList.remove('fa-bars');
+    hamMenuIcon.classList.add('fa-times');
+    hamMenuIcon.style = 'display: block';
+  } else {
+    hamMenuIcon.classList.add('fa-bars');
+    hamMenuIcon.classList.remove('fa-times');
+    hamMenuIcon.style = 'display: block';
+  }
+});
