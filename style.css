@@ -59,6 +59,7 @@ section {
   padding: 5rem 0;
 }
 
+/* Reausable classes */
 .btn {
   color: var(--white-color);
   font-size: 1.3rem;
@@ -81,6 +82,20 @@ section {
 .form-btn {
   margin-top: 2.5rem;
   cursor: pointer;
+}
+
+.btn-gradient {
+  background: var(--gradient-color);
+}
+
+.btn-gradient:hover {
+  background: var(--gradient-color-alt);
+}
+
+.dots {
+  font-size: 2.4rem;
+  margin-left: 0.5rem;
+  opacity: 0.75em;
 }
 
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
@@ -204,20 +219,6 @@ section {
   font-family: 'Ma Shan Zheng', cursive;
 }
 
-.btn-gradient {
-  background: var(--gradient-color);
-}
-
-.btn-gradient:hover {
-  background: var(--gradient-color-alt);
-}
-
-.dots {
-  font-size: 2.4rem;
-  margin-left: 0.5rem;
-  opacity: 0.75em;
-}
-
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 /* Booking styles */
 .booking {
@@ -257,4 +258,86 @@ section {
 
 .btn-purple:hover {
   background: var(--purple-light-btn);
+}
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* Featured hotels styles */
+
+.section-head {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.heading {
+  display: block;
+  font-size: 4rem;
+  text-transform: uppercase;
+}
+
+.sub-heading {
+  font-size: 2.7rem;
+  font-family: 'Ma Shan Zheng', cursive;
+  font-weight: 300;
+  color: var(--dark-grey);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  grid-gap: 2.5rem;
+}
+
+.grid-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.featured-hotels {
+  height: 35rem;
+  color: var(--white-color);
+  padding: 1rem;
+  position: relative;
+  z-index: 0;
+}
+
+.featured-hotels::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--purple-transparent-alt);
+  z-index: -1;
+}
+
+.hotel-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -2;
+}
+
+.hotel-name {
+  font-size: 2.6rem;
+  padding: 0.5rem;
+  text-transform: capitalize;
+}
+
+.hotel-price {
+  padding: 0.5rem;
+  font-size: 1.8rem;
+}
+
+.hotel-rating {
+  margin: 2.5rem;
+}
+
+.rating {
+  color: var(--yellow-solid);
 }
