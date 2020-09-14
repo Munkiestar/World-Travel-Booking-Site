@@ -14,10 +14,12 @@
 /*Custom properties*/
 :root {
   --dark-color: #2d2c2c;
+  --dark-grey: #a5a5a5;
   --purple-solid: #350a4f;
   --purple-transparent: rgba(53, 10, 79, 0.7);
   --purple-transparent-alt: rgba(53, 10, 79, 0.5);
   --purple-light: #8f50fb;
+  --purple-light-btn: #56247f;
   --yellow-solid: #fa9e2c;
   --white-color: #fff;
   --gradient-color: linear-gradient(
@@ -57,6 +59,18 @@ section {
   padding: 5rem 0;
 }
 
+.btn {
+  color: var(--white-color);
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 1.25rem 3.5rem;
+  border: none;
+  border-radius: 10rem;
+  display: inline-flex;
+  align-items: center;
+}
+
 .container {
   width: 100%;
   max-width: 120rem;
@@ -64,6 +78,12 @@ section {
   margin: 0 auto;
 }
 
+.form-btn {
+  margin-top: 2.5rem;
+  cursor: pointer;
+}
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 /* Header styles */
 
 .header {
@@ -139,4 +159,102 @@ section {
   text-transform: lowercase;
   font-family: 'Ma Shan Zheng', cursive;
   padding: 0.4rem;
+}
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/*  Hero  */
+.hero {
+  width: 100%;
+  height: 100vh;
+  background: url('./images/hero_background.jpg') center center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  z-index: 0;
+}
+
+.hero:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: inherit;
+  height: inherit;
+  background-color: var(--purple-transparent-alt);
+  z-index: -1;
+}
+
+.main-heading {
+  color: var(--white-color);
+  line-height: 1;
+  text-shadow: 1px 1px 1rem rgba(0, 0, 0, 0.5);
+  margin-bottom: 2.5rem;
+}
+
+.title {
+  font-size: 4.8rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+.subtitle {
+  font-size: 3.6rem;
+  font-family: 'Ma Shan Zheng', cursive;
+}
+
+.btn-gradient {
+  background: var(--gradient-color);
+}
+
+.btn-gradient:hover {
+  background: var(--gradient-color-alt);
+}
+
+.dots {
+  font-size: 2.4rem;
+  margin-left: 0.5rem;
+  opacity: 0.75em;
+}
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* Booking styles */
+.booking {
+  background: var(--gradient-color);
+}
+
+.input-group {
+  margin-bottom: 1.5rem;
+}
+
+.input-label {
+  display: block;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  color: var(--white-color);
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.input,
+.options {
+  width: 100%;
+  outline: none;
+  border: none;
+  min-height: 4rem;
+  padding: 1rem;
+  font-weight: bold;
+  color: var(--dark-grey);
+  letter-spacing: 2px;
+  font-family: inherit;
+  /* resize:none; */
+}
+
+.btn-purple {
+  background: var(--purple-solid);
+}
+
+.btn-purple:hover {
+  background: var(--purple-light-btn);
 }
