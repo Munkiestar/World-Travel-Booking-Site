@@ -3,6 +3,7 @@
 const navLinks = document.querySelector('.nav-links');
 const hamMenu = document.querySelector('.hamburger-menu');
 const hamMenuIcon = document.querySelector('.hamburger-menu i');
+const header = document.querySelector('.header');
 
 hamMenu.addEventListener('click', () => {
   navLinks.classList.toggle('active');
@@ -17,4 +18,9 @@ hamMenu.addEventListener('click', () => {
     hamMenuIcon.classList.remove('fa-times');
     hamMenuIcon.style = 'display: block';
   }
+});
+
+window.addEventListener('scroll', () => {
+  let windowPosition = window.scrollY > 50;
+  header.classList.toggle('active', windowPosition);
 });

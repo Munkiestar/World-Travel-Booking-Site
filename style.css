@@ -44,6 +44,7 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-size: 1.6rem;
   color: var(--dark-color);
+  overflow-x: hidden;
 }
 
 a {
@@ -111,6 +112,10 @@ section {
   left: 0;
   background-color: var(--purple-transparent);
   z-index: 999;
+}
+
+.header.active {
+  background-color: var(--purple-solid);
 }
 
 /* Navbar */
@@ -502,4 +507,217 @@ section {
 
 .bar {
   display: block;
+}
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/*  Footer */
+.footer {
+  padding: 5rem 0;
+  background-color: var(--purple-solid);
+  color: var(--white-color);
+}
+
+.footer-content-brand {
+  margin-bottom: 5rem;
+}
+
+.footer p {
+  color: inherit;
+  text-align: left;
+  margin: 0;
+}
+
+.footer-heading {
+  /* display: block; */
+  text-transform: uppercase;
+  margin-bottom: 2.5rem;
+}
+
+.logo-image {
+  margin-bottom: 2rem;
+}
+
+.sm {
+  display: flex;
+}
+
+.sm-link {
+  font-size: 2rem;
+  width: 4rem;
+  height: 4rem;
+  border: 2px solid var(--yellow-solid);
+  border-radius: 50%;
+  display: flex;
+  margin-right: 1rem;
+  transition: background-color 0.5s;
+}
+
+.sm-link:hover {
+  background-color: var(--yellow-solid);
+  color: var(--dark-color);
+}
+
+.sm-link i {
+  margin: auto;
+}
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* Media Queries */
+
+@media screen and (min-width: 768px) {
+  /* header */
+  .header {
+    height: 10rem;
+  }
+  .header.active {
+    height: 6rem;
+  }
+
+  /* hero */
+  .title {
+    font-size: 8rem;
+  }
+
+  /* contact */
+  .contact-content {
+    justify-content: space-between;
+  }
+
+  .traveler-wrap {
+    display: block;
+    flex: 0 0 45%;
+  }
+
+  .traveler-image {
+    width: 100%;
+  }
+
+  .contact-form {
+    flex: 0 0 50%;
+    align-self: flex-start;
+  }
+
+  .input-group-wrap {
+    display: flex;
+  }
+
+  .input-group-wrap .input-group {
+    width: 50%;
+    margin-right: 2rem;
+  }
+
+  .input-group-wrap .input-group:last-child {
+    margin-right: 0;
+  }
+
+  /* footer */
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .footer-content-brand {
+    margin-bottom: 0;
+    flex: 0 0 60%;
+  }
+
+  .footer .paragraph {
+    margin-top: 2.5rem;
+  }
+
+  .footer-heading {
+    margin-bottom: 5rem;
+  }
+
+  .sm-container {
+    flex: 0 0 40%;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  /* header */
+  .hamburger-menu {
+    display: none;
+  }
+
+  .nav-links {
+    position: initial;
+    height: initial;
+    width: initial;
+    background: transparent;
+    flex-direction: row;
+    justify-content: initial;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .nav-link {
+    text-transform: uppercase;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.4rem;
+    transition: color 500ms;
+  }
+
+  .nav-link:not(:last-child) {
+    margin-right: 3rem;
+    margin-bottom: 0;
+  }
+
+  .nav-link:hover {
+    color: var(--yellow-solid);
+  }
+
+  /* hero */
+  .title {
+    font-size: 12rem;
+  }
+
+  .subtitle {
+    font-size: 4.6rem;
+  }
+
+  /* booking */
+  .form {
+    justify-content: space-between;
+  }
+
+  .input-group {
+    margin-bottom: 0;
+  }
+
+  .input-group:first-child {
+    flex: 0 0 20%;
+  }
+
+  .input,
+  .options {
+    min-width: 10rem;
+  }
+
+  .input-label {
+    margin-top: 1.3rem;
+  }
+
+  /* rooms section */
+  /* .rooms-grid {
+    grid-template-columns: repeat(autofit, minmax(40rem, 1fr));
+    gap: 8rem;
+  }
+
+  .featured-rooms {
+    flex-direction: row;
+    align-items: flex-start;
+  } */
+
+  .room-info {
+    margin-left: 1.5rem;
+  }
+
+  @media screen and (min-width: 1200px) {
+    .form .input-group:first-child {
+      flex: 0 0 30%;
+    }
+  }
 }
